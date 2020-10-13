@@ -9,7 +9,7 @@ describe('Login', function () {
 		await login.load()
 	})
 
-	it('with valid credentials @shallow', async function () {
+	xit('with valid credentials @shallow', async function () {
 		await login.authenticate('tomsmith', 'SuperSecretPassword!')
 		assert(
 			await login.successMessagePresent(),
@@ -17,7 +17,7 @@ describe('Login', function () {
 		)
 	})
 
-	it('not invalid credentials @deep', async function () {
+	xit('not invalid credentials @deep', async function () {
 		await login.authenticate('tomsmith', 'SuperSecretPassword!')
 		assert(
 			!(await login.failureMessagePresent()),
