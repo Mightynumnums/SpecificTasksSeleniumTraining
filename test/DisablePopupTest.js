@@ -15,7 +15,15 @@ describe('Disable Popup', () => {
 	})
 
 	it('locates the popup', async () => {
-		await disablePopup.findPopup(300, 300)
-		assert(await disablePopup.popupIsVisible(), true, 'Popup is visible')
+		\
+		//how do you locate a pop up outside of window view?
+
+		const popup = await this.driver.switchTo().alert()
+		await disablePopup.popupIsVisible()
+		assert(await disablePopup.isVisible(), true)
+		// const result = await this.driver
+		// 	.findElementById('ouibounce-modal')
+		// 	.getText()
+		// assert(result === 'Close')
 	})
 })

@@ -10,8 +10,6 @@ class BasePage {
 		if (url.startsWith('http')) {
 			await this.driver.get(url)
 		} else {
-			console.log('HERE')
-			console.log(config.baseUrl + url)
 			await this.driver.get(config.baseUrl + url)
 		}
 	}
