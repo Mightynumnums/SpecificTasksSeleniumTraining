@@ -26,6 +26,11 @@ class BasePage {
 		await this.find(locator).sendKeys(inputText)
 	}
 
+	// async openNewWindow(url, windowName, windowFeatures) {
+	// 	await this.driver.browser.newWindow(url, windowName, windowFeatures)
+	// 	console.log(this.diver.browser.getTitle())
+	// }
+
 	async isDisplayed(locator, timeout) {
 		if (timeout) {
 			await this.driver.wait(Until.elementLocated(locator), timeout)

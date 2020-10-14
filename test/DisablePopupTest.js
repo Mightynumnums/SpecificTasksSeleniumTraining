@@ -7,23 +7,19 @@ describe('Disable Popup', () => {
 	let disablePopup
 	beforeEach(async function () {
 		disablePopup = new DisablePopupPage(this.driver)
+		await disablePopup.loadPage()
 	})
 
 	it('navigates to the page', async () => {
-		await disablePopup.loadPage()
 		assert(await disablePopup.isPresent(), true, 'Page has loaded')
 	})
 
-	it('locates the popup', async () => {
-		\
-		//how do you locate a pop up outside of window view?
-
-		const popup = await this.driver.switchTo().alert()
-		await disablePopup.popupIsVisible()
-		assert(await disablePopup.isVisible(), true)
-		// const result = await this.driver
-		// 	.findElementById('ouibounce-modal')
-		// 	.getText()
-		// assert(result === 'Close')
-	})
+	// xit('opens another window', async () => {
+	// 	await disablePopup.openNew()
+	// 	assert(
+	// 		await this.driver.browser.getTitle.to.be(
+	// 			'WebdriverIO · Next-gen browser and mobile automation test framework for Node.js'
+	// 		)
+	// 	)
+	// })
 })

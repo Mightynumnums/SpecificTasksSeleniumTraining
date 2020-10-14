@@ -15,12 +15,16 @@ class DisablePopup extends BasePage {
 		await this.find(PAGE_TEXT)
 	}
 
+	// async openNew(url, windowName, windowFeatures) {
+	// 	await this.openNewWindow(
+	// 		'https://webdriver.io',
+	// 		'WebdriverIO window',
+	// 		'width=420,height=230,resizable,scrollbars=yes,status=1'
+	// 	)
+	// }
+
 	async isPresent() {
 		return this.isDisplayed(CONTENT)
-	}
-
-	async findPopup() {
-		// how do you find a pop up?
 	}
 
 	async popupIsVisible() {
