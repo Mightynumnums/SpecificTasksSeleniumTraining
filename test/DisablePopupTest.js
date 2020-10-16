@@ -10,7 +10,7 @@ describe('Disable Popup', () => {
 		await disablePopup.loadPage()
 	})
 
-	it('navigates to the page', async () => {
+	xit('navigates to the page', async () => {
 		assert(await disablePopup.isPresent(), true, 'Page has loaded')
 	})
 
