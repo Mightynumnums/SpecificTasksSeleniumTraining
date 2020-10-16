@@ -10,11 +10,11 @@ describe('Dropdown @deep', () => {
 		await dropdown.loadDropdownPage()
 	})
 
-	it('Loads the dropdown', async () => {
+	xit('Loads the dropdown', async () => {
 		assert(await dropdown.findDropdown(), true)
 	})
 
-	it('Clicks on dropdown', async () => {
+	xit('Clicks on dropdown', async () => {
 		await dropdown.selectDropdown()
 		assert(await dropdown.isSelected(), true)
 	})

@@ -1,3 +1,8 @@
+require('./spec_helper')
+const assert = require('assert')
+const CheckboxesPage = require('../pages/CheckboxesPage')
+const DriverFactory = require('../lib/DriverFactory')
+
 describe('Checkboxes @deep', () => {
 	let checkboxes
 	beforeEach(async function () {
