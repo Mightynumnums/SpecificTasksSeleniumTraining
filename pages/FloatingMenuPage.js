@@ -1,6 +1,8 @@
 const BasePage = require('./BasePage')
+const Until = require('selenium-webdriver').until
 
 const MENU = { id: 'menu' }
+const HOME = { css: '#menu > ul > li:nth-child(1) > a' }
 
 class FloatingMenuPage extends BasePage {
 	constructor(driver) {
@@ -14,6 +16,14 @@ class FloatingMenuPage extends BasePage {
 
 	async findMenu() {
 		await this.find(MENU)
+	}
+
+	async selectMenuItem() {
+		return this.click(HOME)
+	}
+
+	async checkUrl(linkText) {
+		let current = await this.driver.getCurrentUrl()
 	}
 }
 

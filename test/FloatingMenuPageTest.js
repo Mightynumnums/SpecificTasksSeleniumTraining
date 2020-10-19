@@ -14,4 +14,11 @@ describe('Floating Menu @deep', () => {
 		let menu = await floatingMenu.findMenu()
 		assert(floatingMenu.isDisplayed(menu), true)
 	})
+
+	it('Clicks on menu item', async () => {
+		let url = await floatingMenu.selectMenuItem()
+
+		let result = await floatingMenu.checkUrl('#home')
+		assert(result === url)
+	})
 })
