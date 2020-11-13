@@ -1,5 +1,6 @@
 const config = require('../lib/config')
 const Until = require('selenium-webdriver').until
+const By = require('selenium-webdriver').By
 
 class BasePage {
 	constructor(driver) {
@@ -12,6 +13,11 @@ class BasePage {
 		} else {
 			await this.driver.get(config.baseUrl + url)
 		}
+	}
+
+	// this method is to test autocomplete on google
+	async visitUrl2() {
+		await this.driver.get(config.baseUrl2)
 	}
 
 	find(locator) {

@@ -10,12 +10,12 @@ describe('Floating Menu @deep', () => {
 		await floatingMenu.loadMenuItems()
 	})
 
-	it('Load the page with the menu', async () => {
+	xit('Load the page with the menu', async () => {
 		let menu = await floatingMenu.findMenu()
 		assert(floatingMenu.isDisplayed(menu), true)
 	})
 
-	it('Clicks on menu item', async () => {
+	xit('Clicks on menu item', async () => {
 		let url = await floatingMenu.selectMenuItem()
 
 		let result = await floatingMenu.checkUrl('#home')
